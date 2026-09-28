@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/centers.css">
 <link rel="stylesheet" href="css/authority.css">
 <link rel="stylesheet" href="css/purpose.css">
+<link rel="stylesheet" href="css/chart.css">
 </head>
 <body>
 <header class="site-header" id="top">
@@ -507,6 +508,54 @@
       </div>
     </div>
   </section>
+  <section class="section" id="chart">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Interactive</span>
+        <h2>Estimate your chart</h2>
+        <p class="lede">A demonstration tool. Enter a birth date to get a deterministic sample reading &mdash; it uses your date as a seed so the result is stable, but it is <strong>not</strong> a real chart calculation. A genuine chart needs planetary ephemeris data, which this static site deliberately does not ship.</p>
+      </div>
+
+      <form class="chart-form reveal" id="chart-form" novalidate>
+        <div class="chart-form__row">
+          <div class="field">
+            <label for="chart-name">Name</label>
+            <input type="text" id="chart-name" name="name" autocomplete="off" placeholder="Optional">
+          </div>
+          <div class="field">
+            <label for="chart-date">Birth date</label>
+            <input type="date" id="chart-date" name="date" required>
+            <span class="field__error" id="err-date" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="chart-time">Birth time</label>
+            <input type="time" id="chart-time" name="time">
+          </div>
+          <div class="field">
+            <label for="chart-city">Birth city</label>
+            <input type="text" id="chart-city" name="city" autocomplete="off" placeholder="Optional">
+          </div>
+        </div>
+        <div class="chart-form__submit">
+          <button class="btn btn--primary" type="submit">Calculate sample chart</button>
+          <button class="btn btn--ghost" type="reset">Reset</button>
+        </div>
+        <p class="chart-disclaimer">For entertainment and education. Birth data is processed entirely in your browser and is never transmitted or stored.</p>
+      </form>
+
+      <div class="chart-result" id="chart-result" hidden aria-live="polite">
+        <div class="chart-result__inner">
+          <span class="eyebrow">Sample reading</span>
+          <h3 class="chart-result__type" id="result-type"></h3>
+          <p class="chart-result__profile" id="result-profile"></p>
+          <p class="chart-result__summary" id="result-summary"></p>
+          <dl class="chart-result__grid" id="result-grid"></dl>
+          <div class="chart-result__centres" id="result-centres" aria-label="Centres in this sample chart"></div>
+          <p class="chart-result__note">This result is generated from a seeded sample, not from real astronomical positions. Treat it as a way to explore the vocabulary of the system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -515,5 +564,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/chart.js"></script>
 </body>
 </html>

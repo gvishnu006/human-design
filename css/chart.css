@@ -1,0 +1,60 @@
+.chart-form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+  display: grid;
+  gap: 1.1rem;
+}
+
+.chart-form__row { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+.field input, .field select {
+  font: inherit;
+  font-size: .95rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: .65rem .8rem;
+  width: 100%;
+}
+
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 176, 87, .16);
+}
+
+.field__error { font-size: .8rem; color: #f0909c; min-height: 1em; }
+
+.chart-form__submit { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+
+.chart-disclaimer { font-size: .82rem; color: var(--text-faint); margin: 0; }
+
+.chart-result { margin-top: 2rem; }
+.chart-result[hidden] { display: none; }
+
+.chart-result__inner {
+  background: linear-gradient(180deg, rgba(180, 140, 240, .09), var(--surface));
+  border: 1px solid var(--accent-3);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+.chart-result__type { font-family: Fraunces, serif; font-size: clamp(1.7rem, 4vw, 2.4rem); margin: .2rem 0 .3rem; }
+.chart-result__profile { color: var(--accent-2); font-weight: 600; }
+.chart-result__summary { color: var(--text-dim); max-width: 62ch; }
+
+.chart-result__grid { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-top: 1.5rem; }
+.chart-result__cell { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: .9rem 1rem; }
+.chart-result__cell dt { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: .3rem; }
+.chart-result__cell dd { margin: 0; font-size: .95rem; color: var(--text); }
+
+.chart-result__centres { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.4rem; }
+.centre-chip { font-size: .8rem; padding: .3rem .7rem; border-radius: 999px; border: 1px solid var(--line); color: var(--text-faint); }
+.centre-chip--on { color: #17120a; background: var(--accent); border-color: var(--accent); font-weight: 600; }
+
+.chart-result__note { font-size: .84rem; color: var(--text-faint); margin-top: 1.4rem; padding-top: 1rem; border-top: 1px dashed var(--line); }
