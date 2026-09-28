@@ -30,3 +30,32 @@
 
   revealer.forEach(function (el) { io.observe(el); });
 })();
+
+(function () {
+  "use strict";
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".center-tab"));
+
+  function select(tab) {
+    tabs.forEach(function (t) {
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      var active = t === tab;
+      t.setAttribute("aria-selected", active ? "true" : "false");
+      if (panel) panel.hidden = !active;
+    });
+    if (tab) tab.focus();
+  }
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () { select(tab); });
+
+    tab.addEventListener("keydown", function (e) {
+      var next = null;
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+      else if (e.key === "ArrowUp" || e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === "Home") next = tabs[0];
+      else if (e.key === "End") next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); select(next); }
+    });
+  });
+})();
