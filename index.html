@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/hero.css">
 </head>
 <body>
 <header class="site-header" id="top">
@@ -28,7 +29,47 @@
 </header>
 
 <main id="main">
-  <!-- sections injected below -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div>
+        <span class="eyebrow">The system</span>
+        <h1>Know thyself, by design.</h1>
+        <p class="lede">Human Design maps the energetic blueprint you were born with &mdash; your type, your profile, and the authority that tells you when your decisions are actually yours.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#chart">Find your type</a>
+          <a class="btn btn--ghost" href="#types">Explore the 5 types</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><b>5</b><span>Types</span></div>
+          <div class="hero__stat"><b>9</b><span>Profiles</span></div>
+          <div class="hero__stat"><b>4</b><span>Lines</span></div>
+          <div class="hero__stat"><b>9</b><span>Energy centres</span></div>
+        </div>
+      </div>
+      <div class="bodygraph" role="img" aria-label="Simplified body graph showing highlighted Head, Throat, Heart and Solar Plexus centres connected to a defined Sacral and Root.">
+        <p class="bodygraph__title">Sample body graph</p>
+        <div class="bodygraph__stack">
+          <div class="centre centre--active">Head</div>
+          <div class="centre centre--connector">&#9660;</div>
+          <div class="centre centre--active">Throat</div>
+          <div class="centre centre--connector">&#9660;</div>
+          <div class="centre centre--active">Heart</div>
+          <div class="centre centre--connector">&#9660;</div>
+          <div class="centre centre--active">Solar Plexus</div>
+          <div class="centre centre--connector">&#9660;</div>
+          <div class="centre centre--active">Sacral</div>
+          <div class="centre centre--connector">&#9660;</div>
+          <div class="centre">Root</div>
+        </div>
+        <div class="bodygraph__legend">
+          <span><i class="on"></i>Defined</span>
+          <span><i class="off"></i>Undefined</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
