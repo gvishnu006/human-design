@@ -1,0 +1,40 @@
+.triad { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.triad__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.triad__card::after {
+  content: "";
+  position: absolute;
+  inset: auto -30% -60% -30%;
+  height: 120px;
+  background: radial-gradient(closest-side, rgba(255, 176, 87, .16), transparent);
+  pointer-events: none;
+}
+
+.triad__card:nth-child(2)::after { background: radial-gradient(closest-side, rgba(126, 224, 192, .16), transparent); }
+.triad__card:nth-child(3)::after { background: radial-gradient(closest-side, rgba(180, 140, 240, .16), transparent); }
+
+.triad__num { font-family: Fraunces, serif; font-size: 2.4rem; color: var(--line); line-height: 1; display: block; margin-bottom: .6rem; }
+.triad__card h3 { margin-bottom: .35rem; }
+.triad__card p { color: var(--text-dim); }
+.triad__signal { margin-top: 1rem; font-size: .9rem; padding-top: .9rem; border-top: 1px dashed var(--line); }
+.triad__signal b { color: var(--accent-2); }
+.triad__card:nth-child(3) .triad__signal b { color: var(--accent-3); }
+
+.axis { margin-top: 3rem; }
+.axis h3 { margin-bottom: 1.1rem; }
+.axis__row { display: grid; gap: .7rem; }
+.axis__item { display: grid; gap: .35rem; }
+.axis__head { display: flex; justify-content: space-between; font-size: .9rem; }
+.axis__head b { color: var(--text); }
+.axis__head span { color: var(--text-faint); }
+.axis__track { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.axis__fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 1s var(--ease); }
+.axis__note { font-size: .86rem; color: var(--text-faint); }
