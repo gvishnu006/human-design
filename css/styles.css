@@ -157,6 +157,18 @@ img { max-width: 100%; display: block; }
 .site-footer p { margin: 0 auto .4rem; max-width: 70ch; }
 .footer-meta { color: var(--text-faint); font-size: .82rem; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
 

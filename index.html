@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="css/authority.css">
 <link rel="stylesheet" href="css/purpose.css">
 <link rel="stylesheet" href="css/chart.css">
+<link rel="stylesheet" href="css/faq.css">
 </head>
 <body>
 <header class="site-header" id="top">
@@ -553,6 +554,76 @@
           <div class="chart-result__centres" id="result-centres" aria-label="Centres in this sample chart"></div>
           <p class="chart-result__note">This result is generated from a seeded sample, not from real astronomical positions. Treat it as a way to explore the vocabulary of the system.</p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal" style="text-align:center">
+        <span class="eyebrow">Common questions</span>
+        <h2>Worth knowing</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq__item">
+          <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+            <span>Is Human Design a religion?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-1" hidden>
+            <p>No. It is presented as a self-reflection framework, closer to a reflective tool than to a belief system. Nothing here asks for faith &mdash; treat it as a vocabulary for questions you were already asking yourself.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+            <span>Do I need a full birth time for my chart?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-2" hidden>
+            <p>Yes, for a genuine calculation. The Sun, the inner-authority centre, the type and the profile all shift with the time of day, and a four-hour error can change your type entirely. If you do not know your birth time, a rectification process exists for that reason.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+            <span>What exactly is a defined versus undefined centre?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-3" hidden>
+            <p>Defined means the centre is consistently active and reliable &mdash; it works for you without approval. Undefined means it is open and takes its shape from what passes through it, which makes it flexible and easily influenced. Neither is better. Open centres are where empathy comes from; defined centres are where competence comes from.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-4">
+            <span>Does the calculator above give me a real chart?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-4" hidden>
+            <p>No, and it says so on the form. It is a seeded demonstration that uses your birth date to produce a stable sample reading. A real chart requires planetary ephemeris data and the exact geometry of the solar system at your birth moment, which this static site does not include. Use it to learn the vocabulary, not as a reading.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-5">
+            <span>Can my type change over my lifetime?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-5" hidden>
+            <p>No. The mechanical parts of a chart &mdash; type, profile, line, defined and open centres &mdash; are fixed at birth. What evolves is your capacity to live it. Profiles shift noticeably in flavour across a lifetime, and the transitional ones shift the most, which is partly why they are described as transitional in the first place.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta reveal">
+        <h3>Start with the one question you are actually avoiding</h3>
+        <p>The system only becomes useful when you apply it to something real and unresolved. Everything on this page is a reference for that conversation, not a substitute for it.</p>
+        <form class="cta__form" id="cta-form">
+          <label class="visually-hidden" for="cta-email">Email address</label>
+          <input type="email" id="cta-email" placeholder="you@example.com" required>
+          <button class="btn btn--primary" type="submit">Keep me posted</button>
+        </form>
+        <p class="cta__note" id="cta-note">This is a static demo &mdash; the form does not send anything anywhere.</p>
       </div>
     </div>
   </section>

@@ -59,3 +59,37 @@
     });
   });
 })();
+
+(function () {
+  "use strict";
+
+  var triggers = document.querySelectorAll(".faq__trigger");
+
+  triggers.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      triggers.forEach(function (other) {
+        var panel = document.getElementById(other.getAttribute("aria-controls"));
+        other.setAttribute("aria-expanded", "false");
+        if (panel) panel.hidden = true;
+      });
+      if (!open) {
+        btn.setAttribute("aria-expanded", "true");
+        var own = document.getElementById(btn.getAttribute("aria-controls"));
+        if (own) own.hidden = false;
+      }
+    });
+  });
+
+  var ctaForm = document.getElementById("cta-form");
+  if (!ctaForm) return;
+
+  ctaForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = document.getElementById("cta-email");
+    if (!email.checkValidity()) { email.reportValidity(); return; }
+    document.getElementById("cta-note").textContent =
+      "Thanks. This is a static demo, so nothing was actually sent - but the form works.";
+    ctaForm.reset();
+  });
+})();
