@@ -1,0 +1,34 @@
+.auth-layout { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: stretch; }
+
+.auth {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth--primary { border-color: var(--accent-2); background: linear-gradient(180deg, rgba(126, 224, 192, .07), var(--surface)); }
+
+.auth__label { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); }
+.auth__name { font-family: Fraunces, serif; font-size: 1.35rem; margin: .3rem 0 .8rem; }
+.auth__for { font-size: .88rem; color: var(--text-dim); margin-bottom: 1rem; }
+.auth__steps { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: .55rem; }
+.auth__steps li { font-size: .9rem; color: var(--text-dim); padding-left: 1.4rem; position: relative; }
+.auth__steps li::before { content: "\2192"; position: absolute; left: 0; color: var(--accent-2); }
+
+.auth__cue {
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px dashed var(--line);
+  font-size: .84rem;
+  color: var(--text-faint);
+}
+.auth__cue b { color: var(--text); }
+
+.decision { margin-top: 3rem; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2.25rem); }
+.decision ol { margin: 0; padding-left: 1.3rem; display: grid; gap: .7rem; }
+.decision li { color: var(--text-dim); }
+.decision li b { color: var(--text); }
+.decision h3 { margin-bottom: 1rem; }
